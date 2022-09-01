@@ -59,14 +59,17 @@ header{
 #nav ul li:hover ul{
     display: flex;
     flex-direction: column;
-    width: 150px;
+    width: 120px;
     position: absolute;
     
 }
 #nav ul ul li {
-    padding-top: 10px;
-    background-color: #ffffffc9;
+    padding: 10px 5px;
+    background-color: #ffffff;
     
+}
+#menu-ul{
+    opacity: 1;
 }
 
 #login{
@@ -185,7 +188,7 @@ header{
     width: 100vw;
 }
 aside{
-    margin: 40px 0;
+    margin: 0;
     width: 100vw;
 
     
