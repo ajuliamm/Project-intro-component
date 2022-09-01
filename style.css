@@ -149,12 +149,25 @@ button:active{
  color:rgb(212, 212, 212)
 }
 
+
 aside{
     grid-area: aside;
     overflow: hidden;
 }
+#box-grey{
+    background-color: #e8e8f3;
+    opacity: 0.8;
+    position: absolute;
+    width: 55vw;
+    height: 55vh;
+    top: 0;
+    right: 0;
+    border-radius: 0 0 0 50px;
+    z-index: -1;
+    
+}
 #img-aside{
-    width: 800px;
+    width: 700px;
 }
 
 
@@ -185,9 +198,7 @@ main{
     padding: 20px 15px;
     width: 100vw;
 }
-h1{
-    
-    
+h1{ 
     line-height: 60px;
     margin-right: 0;
 }
@@ -205,18 +216,13 @@ button{
     width:200px;
     height:50px;
 }
-
-
-
     #menu-button{
         display: block;
         width: 50px;
-
     }
     #nav ul{
         display: none; 
     }
-    
     
     #login{
         display: none;
@@ -225,18 +231,16 @@ button{
         
         display: block;
         position: absolute;
-        background-color: rgb(241, 234, 234);
+        background-color: rgb(255, 255, 255);
         width: 60%;
-        height: 50%;
-        left: 50vw;
+        left:25%;
         top:100px;
         text-align: center;
-        z-index: 1000;
+        z-index: 1;
     }
     #nav.active #login{
         display: flex;
     }
-    
    
     #nav ul li{
         padding: 1rem 0;
@@ -245,12 +249,42 @@ button{
     #nav ul li a{
         margin-right: 0;
     }
-   
-        
+    #menu-button{
+        display: flex;
+        gap: .5rem;
+        background-color: transparent;
+        border: none;
 
+    }
+    #hamburger{
+        border-top: 2px solid;
+        width: 20px;
+        color: #3f3c3c;
+    }
+    #hamburger::after, #hamburger::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+
+    }
+    #nav.active #hamburger{
+        border-top-color: transparent  ;
+    }
+    #nav.active #hamburger::before{
+        transform: rotate(135deg);
+    }
+    #nav.active #hamburger::after{
+        transform: rotate(-135deg);
+        top: -7px;
         
     }
-
+   
+    
     
 
 }
