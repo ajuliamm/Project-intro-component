@@ -1,45 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script src="./script.js"></script>
-    <title>Component Intro</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="./script.js"></script>
+  <title>Component Intro</title>
 </head>
+
 <body>
-<header>
+  <header>
+
     <img id="logo" src="./assets/logo (1).png">
     <div id="menu">
-    <nav id="nav">
-        <ul>
-            <li> <a href="/">Products</a></li>
-            <li> <a href="/">Features</a></li>
-            <li> <a href="/">Pricing</a></li>               
+      <nav id="nav">
+        <button onclick="menuToggle()" type="button" id="menu-button">Menu</button>
+        <ul id="menu-ul">
+          <li> <a href="/">Products</a>
+              <ul id="menu-ul2"><li> <a href="/">Product One</a></li>
+              <li> <a href="/">Product Two</a></li>
+              <li> <a href="/">Product Three</a></li>
+              </ul>
+          </li>
+          <li> <a href="/">Features</a></li>
+          <li> <a href="/">Pricing</a></li>
         </ul>
-    </nav>
-    <button id="login" type="button">Login</button>
+      </nav>
+      <button id="login" type="button">Login</button>
     </div>
-</header>
-   
-<main>
-  <h3><strong>NEW</strong>MONOGRAPG DASHBOARD</h3> 
+  </header>
 
-  <h1>POWEFUL INSIGHTS INTO YOUR TEAM</h1>
-  <p>Project planning and time tracking for agile teams</p>
+  <main>
+    <h3><strong>NEW</strong>MONOGRAPG DASHBOARD</h3>
 
-  <div id="box-button"><button> SCHEDULE A DEMO</button> <p id="p2">TO SEE A LIVE PREVIEW</p>
-  </div>
+    <h1>POWEFUL INSIGHTS INTO YOUR TEAM</h1>
+    <p id="p1">Project planning and time tracking for agile teams</p>
+
+    <div id="box-button">
+      <button> SCHEDULE A DEMO</button>
+      <p id="p2">TO SEE A LIVE PREVIEW</p>
+    </div>
   </main>
   <aside>
     <img id="img-aside" src="./assets/illustration-devices.png">
   </aside>
-  
- 
-    
+
+
+
 </body>
+
 </html>

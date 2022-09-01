@@ -22,12 +22,17 @@ header{
 
 #logo{
     width: 30px;
+    height: 30px;
+    margin-right: 20px;
     
 }
 #menu{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+#menu-button{
+    display: none;
 }
 #nav ul {
     list-style-type: none;
@@ -46,6 +51,22 @@ header{
 }
 #nav ul li a:active{
     opacity: 0.5;
+}
+
+#nav ul ul{
+    display: none;
+}
+#nav ul li:hover ul{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    position: absolute;
+    
+}
+#nav ul ul li {
+    padding-top: 10px;
+    background-color: #ffffffc9;
+    
 }
 
 #login{
@@ -130,10 +151,106 @@ button:active{
 
 aside{
     grid-area: aside;
-    width: 50%;
     overflow: hidden;
 }
 #img-aside{
     width: 800px;
+}
+
+
+
+
+@media(max-width:570px){
+body{
+    display: grid;
+    grid-template-areas: "header "
+                          "aside"
+                          "main ";
+}
+header{
+    padding: 50px 15px;
+    width: 100vw;
+}
+aside{
+    margin: 40px 0;
+    width: 100vw;
+
+    
+
+}
+#img-aside{
+    width: 550px;
+}
+main{
+    padding: 20px 15px;
+    width: 100vw;
+}
+h1{
+    
+    
+    line-height: 60px;
+    margin-right: 0;
+}
+#p1{
+    width: 90vw;
+    font-size: 1.5rem;
+    color: #979696;
+    padding: 0;
+
+}
+
+button{
+    font-size: 1.3rem;
+    font-weight: 700;
+    width:200px;
+    height:50px;
+}
+
+
+
+    #menu-button{
+        display: block;
+        width: 50px;
+
+    }
+    #nav ul{
+        display: none; 
+    }
+    
+    
+    #login{
+        display: none;
+    }
+    #nav.active ul{
+        
+        display: block;
+        position: absolute;
+        background-color: rgb(241, 234, 234);
+        width: 60%;
+        height: 50%;
+        left: 50vw;
+        top:100px;
+        text-align: center;
+        z-index: 1000;
+    }
+    #nav.active #login{
+        display: flex;
+    }
+    
+   
+    #nav ul li{
+        padding: 1rem 0;
+        font-size: 1.8rem;
+    }
+    #nav ul li a{
+        margin-right: 0;
+    }
+   
+        
+
+        
+    }
+
+    
 
 }
